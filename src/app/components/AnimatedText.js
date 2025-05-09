@@ -38,7 +38,7 @@ const AnimatedText = ({ text, className = "" }) => {
       className={`w-full py-2 mx-auto flex items-center justify-center text-center overflow-hidden ${className}`}
     >
       <motion.h1
-        className={`inline-block w-full text-[--var(--color-dark)] font-bold capitalize text-8xl lg:text-6xl md:text-4xl sm:text-3xl xs:text-2xl ${className}`}
+        className={`inline-block w-full text-[--var(--color-dark)] font-bold capitalize text-8xl ${className}`}
         variants={quoteAnimation}
         initial="initial"
         animate="animate"
@@ -46,7 +46,7 @@ const AnimatedText = ({ text, className = "" }) => {
         {text.split(" ").map((word, index) => (
           <motion.span
             key={word + "_" + index}
-            className="inline-block md:inline-block sm:inline-block xs:inline-block"
+            className="inline-block"
             variants={wordAnimation}
             
           >

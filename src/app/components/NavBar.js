@@ -25,9 +25,9 @@ const CustomLink = ({ href, title, className }) => {
 
 const NavBar = () => {
   return (
-    <header className="w-full flex items-center justify-between p-8">
+    <header className="w-full flex items-center justify-between px-32 py-8 font-medium ">
       {/* Primary Navigation */}
-      <nav className="flex items-center space-x-4">
+      <nav className="flex items-center space-x-4 pl-4 text-lg">
         <CustomLink href="/" title="Home" className="" />
         <CustomLink href="/about" title="About" className="" />
         <CustomLink href="/projects" title="Projects" className="" />
@@ -35,14 +35,14 @@ const NavBar = () => {
       </nav>
 
       {/* Logo */}
-      <div className="text-2xl font-bold">
+      <div className="absolute left-[50%] top-2 translate-x-[-50%] text-2xl font-bold ">
         <Logo />
       </div>
 
       {/* Secondary Navigation */}
       <nav className="flex items-center justify-center flex-wrap space-x-4">
         <motion.a
-          href="/http://twitter.com"
+          href="/https://x.com/ShubhamPat77625"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-blue-500 w-6 "
@@ -70,7 +70,7 @@ const NavBar = () => {
           className="hover:text-blue-500 w-6"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
-        >     
+        >
           <LinkedInIcon />{" "}
         </motion.a>
 
@@ -91,8 +91,7 @@ const NavBar = () => {
           className="hover:text-blue-500 w-6"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
-        >     
-        </motion.a>
+        ></motion.a>
       </nav>
     </header>
   );

@@ -5,12 +5,13 @@ import AnimatedText from "./components/AnimatedText";
 import Link from "next/link";
 import { LinkArrow } from "./components/Icons";
 import HireMe from "./components/HireMe";
+import LightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 
 export default function Home() {
   return (
     <>
       <main className="flex items-center w-full min-h-screen text-[var(--color-dark)] ">
-        <Layout className="pt-0 md:pt-16 sm:pt-8 xs:pt-4">
+        <Layout className="pt-0">
           <div className="flex items-center justify-between w-full">
             <div className="w-1/2 ">
               <Image
@@ -21,14 +22,11 @@ export default function Home() {
             </div>
             <div className="w-1/2 flex flex-col items-start justify-center pl-8">
               <AnimatedText
-                text="Turning Vision Into Reality With Code And Design."
+                text="From Frontend to Backend, and Beyond with Automation."
                 className="!text-6xl !text-left"
               />
-              <p className="my-4 text-base font-medium md:text-sm sm:text-xs xs:text-xs">
-                As a skilled full-stack developer, I am dedicated to turning
-                ideas into innovative web applications. Explore my latest
-                projects and articles, showcasing my expertise in React.js and
-                web development.
+              <p className="my-4 text-base font-medium ">
+              Results-driven Full Stack Developer skilled in building scalable applications and automating quality assurance. I turn complex concepts into user-friendly solutions. Explore my latest projects and articles, showcasing my expertise in Web development and Automation testing.
               </p>
               <div className="flex items-center self-start mt-2">
                 <Link
@@ -51,7 +49,14 @@ export default function Home() {
           </div>
         </Layout>
 
-          <HireMe />
+        <HireMe />
+        <div className="absolute right-8 bottom-8 inline-block w-24 ">
+          <Image
+            src={LightBulb}
+            alt="Shubham's Portfolio"
+            className="w-full h-auto"
+          />
+        </div>
       </main>
     </>
   );

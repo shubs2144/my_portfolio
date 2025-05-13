@@ -4,8 +4,9 @@ import Link from "next/link";
 import React from "react";
 import Logo from "./Logo";
 import { usePathname } from "next/navigation";
-import { GithubIcon, LinkedInIcon, NaukariIcon, TwitterIcon } from "./Icons";
+import { GithubIcon, LinkedInIcon, MoonIcon, NaukariIcon, SunIcon, TwitterIcon } from "./Icons";
 import { motion } from "framer-motion";
+import useThemeSwitcher from "./hooks/useThemeSwitcher";
 
 const CustomLink = ({ href, title, className }) => {
   const pathname = usePathname(); // Get current path
@@ -24,18 +25,21 @@ const CustomLink = ({ href, title, className }) => {
 };
 
 const NavBar = () => {
+
+  const { theme, setTheme } = useThemeSwitcher();
+
   return (
-    <header className="w-full flex items-center justify-between px-32 py-8 font-medium ">
+    <header className="w-full flex items-center justify-between px-32 py-10 font-medium dark:bg-[var(--color-dark)] dark:text-[var(--color-light)] relative">
       {/* Primary Navigation */}
       <nav className="flex items-center space-x-4 pl-4 text-lg">
         <CustomLink href="/" title="Home" className="" />
         <CustomLink href="/about" title="About" className="" />
         <CustomLink href="/projects" title="Projects" className="" />
-        <CustomLink href="/contact" title="Contact" className="" />
+        <CustomLink href="/insights" title="Insights" className="" />
       </nav>
 
       {/* Logo */}
-      <div className="absolute left-[50%] top-2 translate-x-[-50%] text-2xl font-bold ">
+      <div className="absolute left-[50%] top-4 translate-x-[-50%] text-2xl font-bold ">
         <Logo />
       </div>
 
@@ -92,6 +96,19 @@ const NavBar = () => {
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
         ></motion.a>
+
+        <button 
+        onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+        className="ml-3 flex items-center justify-center w-6 h-6 rounded-full bg-[var(--color-dark)"
+        >
+            {
+              theme === "light" ?
+              <SunIcon className={"fill-[var(--color-dark)]"}  /> :
+              <MoonIcon className={"fill-[var(--color-dark)]"} />
+            }
+        </button>
+
+
       </nav>
     </header>
   );

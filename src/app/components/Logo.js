@@ -13,7 +13,7 @@ const Logo = () => {
     <div className='flex items-center justify-center text-2xl font-bold'>
       <MotionLink 
         href='/' 
-        className='w-16 h-16 flex items-center justify-center rounded-full bg-[var(--color-dark)] text-[var(--color-light)]'
+        className='w-16 h-16 flex items-center justify-center rounded-full bg-[var(--color-dark)] text-[var(--color-light)] border border-solid border-transparent dark:border-[var(--color-light)] '
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         animate={{

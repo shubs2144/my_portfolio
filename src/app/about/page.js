@@ -1,9 +1,46 @@
+'use client';
+
 import Head from "next/head";
-import React from "react";
 import AnimatedText from "../components/AnimatedText";
 import Layout from "../components/Layout";
 import Image from "next/image";
 import ProfilePic from "../../../public/images/profile/shubham-profile.jpg";
+import { useEffect, useRef } from "react";
+import { useInView, useMotionValue, useSpring } from "framer-motion";
+import Skills from "../components/Skills";
+import Experience from "../components/Experience";
+import Education from "../components/Education";
+
+
+const AnimatedNumber = ({ value }) => {
+  const ref = useRef(null);
+  const motionValue = useMotionValue(0);
+  const springValue = useSpring(motionValue, {
+    duration: 3000,
+    type: "spring",
+  });
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      motionValue.set(value);
+    }
+  }, [isInView, value, motionValue]);
+
+  useEffect(() => {
+    springValue.on("change", (latest) => {
+      if (ref.current && latest.toFixed(0) <= value) {
+        ref.current.textContent = latest.toFixed(0);
+      }
+    });
+  }, [springValue, value]);
+  <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-[var(--color-dark)]"></div>
+  return (
+    <span ref={ref} className="inline-block text-7xl font-bold">
+      {value}
+    </span>
+  );
+};
 
 const page = () => {
   return (
@@ -16,13 +53,13 @@ const page = () => {
       <main className="w-full flex flex-col items-center justify-center ">
         <Layout className="pt-16">
           <AnimatedText text="Code smart. Test smarter!" className="mb-14" />
-          <div className="grid grid-cols-8 gap-16 w-full">
+          <div className="grid grid-cols-8 gap-12 w-full">
             <div className="col-span-3 flex flex-col items-start justify-start">
               <h2 className="text-lg font-bold mb-4 uppercase text-[var(--color-dark)]/75">
                 Biography
               </h2>
               <p className="font-medium">
-                Hi, I'm Shubham Patil — As a results-driven Full Stack
+                Hi, I&apos;m Shubham Patil — As a results-driven Full Stack
                 Developer, I specialize in building scalable web applications
                 and ensuring quality with robust automation testing. With
                 hands-on experience in both frontend and backend development, I
@@ -45,35 +82,52 @@ const page = () => {
               </p>
             </div>
 
-            <div className="col-span-3 relative h-max flex flex-col rounded-2xl border-2 border-solid border-[var(--color-dark)] bg-[var(--color-light)] p-8 items-start justify-start">
+            {/* <div className="col-span-3 relative h-full  rounded-2xl border-2 border-solid border-[var(--color-dark)] bg-[var(--color-light)] p-8 ">
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-[var(--color-dark)]"></div>
               <Image
                 src={ProfilePic}
                 alt="Shubham"
-                className="w-full h-auto rounded-2xl"
+                className="w-full h-full rounded-2xl"
               />
+            </div> */}
+
+            <div className="col-span-3 relative">
+              <div className="relative h-full z-10 rounded-2xl border-2 border-solid border-[var(--color-dark)] bg-[var(--color-light)] p-8">
+                <Image
+                  src={ProfilePic}
+                  alt="Shubham"
+                  className="w-full h-full rounded-2xl"
+                />
+              </div>
+              <div className="absolute top-0 -right-3 w-[102%] h-[103%] rounded-[2rem] bg-[var(--color-dark)]"/>
             </div>
+
+
+
             <div className="col-span-2 flex flex-col items-end justify-between">
               <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">20+</span>
+                <span className="inline-block text-7xl font-bold"><AnimatedNumber value={20} />+</span>
                 <h2 className="text-xl font-medium capitalize text-[var(--color-dark)]/75">
                   Projects completed
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">0.6+</span>
+                <span className="inline-block text-7xl font-bold"><AnimatedNumber value={6} />+</span>
                 <h2 className="text-xl font-medium capitalize text-[var(--color-dark)]/75">
-                  years of experience
+                  Months of experience
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">50+</span>
+                <span className="inline-block text-7xl font-bold"><AnimatedNumber value={20} />+</span>
                 <h2 className="text-xl font-medium capitalize text-[var(--color-dark)]/75">
                   Projects completed
                 </h2>
               </div>
             </div>
           </div>
+          <Skills />
+          <Experience />
+          <Education />
         </Layout>
       </main>
     </>

@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* app/globals.css */
 :root {
   --color-dark: #1b1b1b;
@@ -7,6 +10,9 @@
   --color-primary: #B63E96;
   --color-primary-dark: #58E6D9;
   --font-mont: "Montserrat", sans-serif;
+  --circular-light: repeating-radial-gradient(rgba(0, 0, 0, 0.4) 2px,#f5f5f5 5px,#f5f5f5 100px
+  );
+
 }
 
 body {
@@ -27,4 +33,12 @@ body {
   .animate-spin-slow {
     animation: spin-slow 8s linear infinite;
   }
+
+  .bg-circular-light {
+    background-image: var(--circular-light);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
 }
+

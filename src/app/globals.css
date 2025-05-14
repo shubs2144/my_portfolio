@@ -10,9 +10,22 @@
   --color-primary: #B63E96;
   --color-primary-dark: #58E6D9;
   --font-mont: "Montserrat", sans-serif;
-  --circular-light: repeating-radial-gradient(rgba(0, 0, 0, 0.4) 2px,#f5f5f5 5px,#f5f5f5 100px
-  );
+  --circular-light: repeating-radial-gradient(rgba(0, 0, 0, 0.4) 2px,#f5f5f5 5px,#f5f5f5 100px);
+  --circular-dark: repeating-radial-gradient(rgba(255, 255, 255, 0.5) 2px,#f5f5f5 8px,#f5f5f5 100px);
 
+    /* Custom breakpoint variables - using your provided values */
+  --screen-xs: 479px;
+  --screen-sm: 639px;
+  --screen-md: 767px;
+  --screen-lg: 1023px;
+  --screen-xl: 1279px;
+  --screen-2xl: 1535px;
+}
+
+/* Add dark mode override just for the circular patterns */
+.dark {
+  --circular-light: repeating-radial-gradient(rgba(255, 255, 255, 0.5) 2px,#1b1b1b 8px,#1b1b1b 100px);
+  --circular-dark: repeating-radial-gradient(rgba(0, 0, 0, 0.4) 2px,#f5f5f5 5px,#f5f5f5 100px);
 }
 
 body {
@@ -38,6 +51,62 @@ body {
     background-image: var(--circular-light);
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  .bg-circular-dark {
+    background-image: var(--circular-dark);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  /* Custom responsive utilities using your breakpoints */
+  
+  /* 2xl breakpoint - screens smaller than 1536px */
+  @media (max-width: var(--screen-2xl)) {
+    .max-2xl\:hidden {
+      display: none;
+    }
+    /* Add more 2xl specific utilities here */
+  }
+  
+  /* xl breakpoint - screens smaller than 1280px */
+  @media (max-width: var(--screen-xl)) {
+    .max-xl\:hidden {
+      display: none;
+    }
+    /* Add more xl specific utilities here */
+  }
+  
+  /* lg breakpoint - screens smaller than 1024px */
+  @media (max-width: var(--screen-lg)) {
+    .max-lg\:hidden {
+      display: none;
+    }
+    /* Add more lg specific utilities here */
+  }
+  
+  /* md breakpoint - screens smaller than 768px */
+  @media (max-width: var(--screen-md)) {
+    .max-md\:hidden {
+      display: none;
+    }
+    /* Add more md specific utilities here */
+  }
+  
+  /* sm breakpoint - screens smaller than 640px */
+  @media (max-width: var(--screen-sm)) {
+    .max-sm\:hidden {
+      display: none;
+    }
+    /* Add more sm specific utilities here */
+  }
+  
+  /* xs breakpoint - screens smaller than 480px */
+  @media (max-width: var(--screen-xs)) {
+    .max-xs\:hidden {
+      display: none;
+    }
+    /* Add more xs specific utilities here */
   }
 
 }

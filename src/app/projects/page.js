@@ -16,33 +16,35 @@ const FeaturedProjects = ({ type, title, summary, img, link, githubLink }) => {
   return (
     <article className="relative">
       {/* Main content */}
-      <div className="flex items-center justify-between w-full p-12 bg-[var(--color-light)] shadow-2xl rounded-3xl border border-solid border-[var(--color-dark)] relative rounded-br-2xl z-10">
+      <div className="flex items-center justify-between w-full p-12 bg-[var(--color-light)] shadow-2xl rounded-3xl border border-solid border-[var(--color-dark)] relative rounded-br-2xl z-10 dark:bg-[var(--color-dark)] dark:border-[var(--color-light)]">
         <Link href={link} target="_blank"
-          className="w-1/2 cursor-pointer overflow-hidden rounded-lg"
+          className="w-1/2 cursor-pointer overflow-hidden rounded-lg dark:shadow-[var(--color-light)]"
         >
          <FreamerImage src={img} alt={title} className="w-full h-auto" 
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.2 }}
+        priority
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
         />
         </Link>
         <div className="flex flex-col items-start justify-between w-1/2 pl-12">
-          <span className="text-xl mb-2 font-medium text-[var(--color-primary)]">
+          <span className="text-xl mb-2 font-medium text-[var(--color-primary)] dark:text-[var(--color-primary-dark)]">
             {type}
           </span>
           <Link href={link} target="_blank"
-            className="hover:underline underline-offset-2">
-            <h2 className="my-2 text-4xl font-bold text-left hover:underline">
+            className="hover:underline underline-offset-2 dark:text-[var(--color-light)]">
+            <h2 className="my-2 text-4xl font-bold text-left hover:underline dark:text-[var(--color-light)]">
               {title}
             </h2>
           </Link>
-          <p className="my-2 text-text-[var(--color-dark)] font-medium">
+          <p className="my-2 text-text-[var(--color-dark)] font-medium dark:text-[var(--color-light)]">
             {summary}
           </p>
           <div className='flex items-center w-full mt-2'>
             <Link href={githubLink} target="_blank" className="w-10">
               <GithubIcon />
             </Link>
-            <Link href={link} target="_blank" className="ml-4 px-6 p-2 text-lg font-semibold text-[var(--color-light)] bg-[var(--color-dark)] rounded-lg">
+            <Link href={link} target="_blank" className="ml-4 px-6 p-2 text-lg font-semibold text-[var(--color-light)] bg-[var(--color-dark)] rounded-lg dark:bg-[var(--color-light)] dark:text-[var(--color-dark)] hover:bg-[var(--color-light)] hover:text-[var(--color-dark)] transition-colors duration-300 ease-in-out">
               View Project
             </Link>
           </div>
@@ -50,7 +52,7 @@ const FeaturedProjects = ({ type, title, summary, img, link, githubLink }) => {
       </div>
       
       {/* 3D effect shadow - positioned outside the article */}
-      <div className="absolute -right-3 top-3 w-full h-full rounded-3xl bg-[var(--color-dark)] rounded-br-3xl" />
+      <div className="absolute -right-3 top-3 w-full h-full rounded-3xl bg-[var(--color-dark)] rounded-br-3xl dark:bg-[var(--color-light)]" />
     </article>
   )
 }
@@ -59,7 +61,7 @@ const Project = ({ title, type, link, githubLink, img }) => {
   return (
     <article className="relative w-full">
 
-      <div className='flex flex-col items-center justify-center p-6 mt-4 bg-[var(--color-light)] shadow-2xl rounded-3xl border border-solid border-[var(--color-dark)] relative z-10 rounded-br-2xl'>
+      <div className='flex flex-col items-center justify-center p-6 mt-4 bg-[var(--color-light)] shadow-2xl rounded-3xl border border-solid border-[var(--color-dark)] relative z-10 rounded-br-2xl dark:bg-[var(--color-dark)] dark:border-[var(--color-light)]'>
 
       <Link href={link} target="_blank"
         className="w-full cursor-pointer overflow-hidden rounded-lg"
@@ -70,7 +72,7 @@ const Project = ({ title, type, link, githubLink, img }) => {
         />
       </Link>
       <div className="flex flex-col items-start justify-between w-full pl-6">
-        <span className="text-xl font-medium mt-4 text-[var(--color-primary)]">
+        <span className="text-xl font-medium mt-4 text-[var(--color-primary)] dark:text-[var(--color-primary-dark)]">
           {type}
         </span>
         <Link href={link} target="_blank"
@@ -91,7 +93,7 @@ const Project = ({ title, type, link, githubLink, img }) => {
         </div>
       </div>
       </div>
-       <div className="absolute top-3 left-3 w-full h-full rounded-3xl bg-[var(--color-dark)] rounded-br-3xl" />
+       <div className="absolute top-3 left-3 w-full h-full rounded-3xl bg-[var(--color-dark)] rounded-br-3xl dark:bg-[var(--color-light)]" />
     </article>
   )
 }
@@ -104,10 +106,10 @@ const page = () => {
         <meta name="description" content="This is the Project page" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      <main className='w-full flex flex-col items-center justify-center mb-16'>
-        <Layout className="pt-16">
+      <main className='w-full flex flex-col items-center justify-center  dark:text-[var(--color-light)] dark:bg-[var(--color-dark)]'>
+        <Layout className="pt-16 dark:bg-[var(--color-dark)]">
           <AnimatedText text={"Projects"} className='mb-16' />
-          <div className="grid grid-cols-12 gap-24 gap-y-32">
+          <div className="grid grid-cols-12 gap-24 gap-y-32 dark:bg-[var(--color-dark)]">
             <div className="col-span-12">
               <FeaturedProjects
 

@@ -52,9 +52,9 @@ const Article = ({ title, date, link, img }) => {
     whileInView={{ y: 0 }}
     transition={{ duration: 0.5, ease: "easeInOut" }}
     viewport={{ once: true }}
-    className='relative w-full flex items-center justify-between p-4 py-6 my-6 bg-[var(--color-light)] rounded-2xl border border-solid border-[var(--color-dark)] z-10 first:mt-0 border-r-4 border-b-4'> 
+    className='relative w-full flex items-center justify-between p-4 py-6 my-6 bg-[var(--color-light)] rounded-2xl border border-solid border-[var(--color-dark)] z-10 first:mt-0 border-r-4 border-b-4 dark:bg-[var(--color-dark)] dark:border-[var(--color-light)]'> 
      <MovingImg title={title} img={img} link={link} />
-      <span className='text-[var(--color-primary)] font-semibold pl-4'>{date}</span>
+      <span className='text-[var(--color-primary)] font-semibold pl-4 dark:text-[var(--color-primary-dark)]'>{date}</span>
     </motion.li>
       )
 }
@@ -63,13 +63,15 @@ const Article = ({ title, date, link, img }) => {
 const FeaturedArticles = ({ time, title, summary, img, link }) => {
   return (
     <li className='relative'>
-    <div className='col-span-1 w-full p-4 bg-[var(--color-light)]  rounded-3xl border border-solid border-[var(--color-dark)] z-10 relative'>
+    <div className='col-span-1 w-full p-4 bg-[var(--color-light)]  rounded-3xl border border-solid border-[var(--color-dark)] z-10 relative dark:bg-[var(--color-dark)] dark:border-[var(--color-light)]'>
       <Link href={link} target="_blank"
         className="w-full inline-block cursor-pointer overflow-hidden rounded-lg"
       >
         <FreamerImage src={img} alt={title} className="w-full h-auto" 
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.2 }}
+        priority
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
         />
       </Link>
       <Link href={link} target="_blank"
@@ -81,11 +83,11 @@ const FeaturedArticles = ({ time, title, summary, img, link }) => {
       <p className="mb-2 text-sm">
         {summary}
       </p>
-      <span className="font-semibold text-[var(--color-primary)]">
+      <span className="font-semibold text-[var(--color-primary)] dark:text-[var(--color-primary-dark)]">
         {time}
       </span>
     </div>
-    <div className="absolute -right-3 top-3 w-full h-full rounded-3xl bg-[var(--color-dark)] rounded-br-3xl" />
+    <div className="absolute -right-3 top-3 w-full h-full rounded-3xl bg-[var(--color-dark)] rounded-br-3xl dark:bg-[var(--color-light)]" />
     </li>
   )
 }
@@ -99,7 +101,7 @@ const page = () => {
         <meta name="description" content="This is the Blogs and Articles page" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      <main className='w-full flex flex-col items-center justify-center mb-16 overflow-hidden'>
+      <main className='w-full flex flex-col items-center justify-center overflow-hidden dark:text-[var(--color-light)] dark:bg-[var(--color-dark)]'>
         <Layout className="pt-16">
           <AnimatedText text="Insights" className="mb-16" />
           <ul className='grid grid-cols-2 gap-16'>

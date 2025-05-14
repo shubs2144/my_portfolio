@@ -35,10 +35,10 @@ const wordAnimation = {
 const AnimatedText = ({ text, className = "" }) => {
   return (
     <div
-      className={`w-full py-2 mx-auto flex items-center justify-center text-center overflow-hidden ${className}`}
+      className={`w-full py-2 mx-auto flex items-center justify-center text-center overflow-hidden max-sm:py-0 ${className}`}
     >
       <motion.h1
-        className={`inline-block w-full text-[--var(--color-dark)] font-bold capitalize text-8xl ${className}`}
+        className={`inline-block w-full text-[--var(--color-dark)] font-bold capitalize text-8xl ${className} dark:text-[var(--color-light)]`}
         variants={quoteAnimation}
         initial="initial"
         animate="animate"

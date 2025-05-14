@@ -14,7 +14,7 @@ const Details = ({ type, time, place, info }) => {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, type: 'spring' }}>
             <h3 className='capitalize  text-2xl font-bold'>{type}</h3>
-            <span className='capitalize font-medium text-[--var(--color-dark)]/75'>
+            <span className='capitalize font-medium text-[--var(--color-dark)]/75 dark:text-[var(--color-light)]/75'>
                 {time} | {info}
             </span>
             <p className='w-full font-medium'>{place}</p>
@@ -40,7 +40,7 @@ const Education = () => {
 
                 <motion.div
                     style={{ scaleY: scrollYProgress }}
-                    className='absolute top-0 left-9 w-[4px] h-full bg-[var(--color-dark)] origin-top' />
+                    className='absolute top-0 left-9 w-[4px] h-full bg-[var(--color-dark)] origin-top dark:bg-[var(--color-light)]' />
 
                 <ul className='w-full flex flex-col items-start justify-between ml-4'>
                     <Details

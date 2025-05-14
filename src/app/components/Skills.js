@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 const Skill = ({ name, x, y }) => {
   return (
     <motion.div
-      className="rounded-full flex items-center justify-center flex-wrap py-3 px-6 font-semibold bg-[var(--color-dark)]/90 text-[var(--color-light)] shadow-[var(--color-dark)] cursor-pointer absolute"
+      className="rounded-full flex items-center justify-center flex-wrap py-3 px-6 font-semibold bg-[var(--color-dark)]/90 text-[var(--color-light)] shadow-[var(--color-dark)] cursor-pointer absolute dark:bg-[var(--color-light)]/90 dark:text-[var(--color-dark)] dark:shadow-[var(--color-light)]"
       whileHover={{ scale: 1.05 }}
       initial={{ x: 0, y: 0 }}
-      whileInView={{ x: x, y: y }}
+      whileInView={{ x: x, y: y,  }}
       transition={{ duration: 3, type: "spring" }}
       viewport={{ once: true }}
     >
@@ -22,7 +22,7 @@ const Skills = () => {
       <h2 className="font-bold text-8xl mt-48 text-center">Skills</h2>
       <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circular-light">
         <motion.div
-          className=" rounded-full flex items-center justify-center flex-wrap p-6 font-semibold bg-[var(--color-dark)]/90 text-[var(--color-light)] shadow-[var(--color-dark)] cursor-pointer"
+          className=" rounded-full flex items-center justify-center flex-wrap p-6 font-semibold bg-[var(--color-dark)]/90 text-[var(--color-light)] shadow-[var(--color-dark)] cursor-pointer absolute dark:bg-[var(--color-light)]/90 dark:text-[var(--color-dark)]"
           whileHover={{ scale: 1.05 }}
         >
           Web

@@ -30,6 +30,9 @@ const useThemeSwitcher = () => {
             }
         }
         }
+
+        handleChange();
+
         mediaQuery.addEventListener('change', handleChange)
         handleChange()
         return () => mediaQuery.removeEventListener('change', handleChange)
@@ -40,7 +43,9 @@ const useThemeSwitcher = () => {
         if (theme === 'dark') {
             root.classList.add('dark')
             window.localStorage.setItem('theme', 'dark')
-        } else {
+        } 
+        
+        if (theme === 'light') {
             root.classList.remove('dark')
             window.localStorage.setItem('theme', 'light')
         }

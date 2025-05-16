@@ -36,7 +36,7 @@ const AnimatedNumber = ({ value }) => {
   }, [springValue, value]);
   <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-[var(--color-dark)]"></div>
   return (
-    <span ref={ref} className="inline-block text-7xl font-bold">
+    <span ref={ref} className="inline-block text-7xl font-bold max-md:text-6xl max-sm:text-5xl max-xs:text-4xl">
       {value}
     </span>
   );
@@ -50,11 +50,11 @@ const page = () => {
         <meta name="description" content="This is the about page" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      <main className="w-full flex flex-col items-center justify-center dark:text-[var(--color-light)]">
+      <main className="w-full flex flex-col items-center justify-center dark:text-[var(--color-light)] overflow-x-hidden">
         <Layout className="pt-16">
-          <AnimatedText text="Code smart. Test smarter!" className="mb-14" />
-          <div className="grid grid-cols-8 gap-12 w-full">
-            <div className="col-span-3 flex flex-col items-start justify-start">
+          <AnimatedText text="Code smart. Test smarter!" className="mb-14 max-lg:!text-7xl max-sm:!text-6xl max-sm:mb-8" />
+          <div className="grid grid-cols-8 gap-12 w-full max-sm:gap-8">
+            <div className="col-span-3 flex flex-col items-start justify-start max-xl:col-span-4 max-md:order-2 max-md:col-span-8">
               <h2 className="text-lg font-bold mb-4 uppercase text-[var(--color-dark)]/75 dark:text-[var(--color-light)]/75">
                 Biography
               </h2>
@@ -82,17 +82,9 @@ const page = () => {
               </p>
             </div>
 
-            {/* <div className="col-span-3 relative h-full  rounded-2xl border-2 border-solid border-[var(--color-dark)] bg-[var(--color-light)] p-8 ">
-              <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-[var(--color-dark)]"></div>
-              <Image
-                src={ProfilePic}
-                alt="Shubham"
-                className="w-full h-full rounded-2xl"
-              />
-            </div> */}
 
-            <div className="col-span-3 relative">
-              <div className="relative h-full z-10 rounded-2xl border-2 border-solid border-[var(--color-dark)] bg-[var(--color-light)] p-8 dark:bg-[var(--color-dark)] dark:border-[var(--color-light)]">
+            <div className="col-span-3 relative max-xl:col-span-4 max-md:order-1 max-md:col-span-8">
+              <div className="relative h-full z-10 rounded-2xl border-2 border-solid border-[var(--color-dark)] bg-[var(--color-light)] p-8 dark:bg-[var(--color-dark)] dark:border-[var(--color-light)] ">
                 <Image
                   src={ProfilePic}
                   alt="Shubham"
@@ -101,27 +93,27 @@ const page = () => {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
-              <div className="absolute top-0 -right-3 w-[102%] h-[103%] rounded-[2rem] bg-[var(--color-dark)] dark:bg-[var(--color-light)]" />
+              <div className="absolute top-0 -right-3 w-[102%] h-[102%] rounded-[2rem] bg-[var(--color-dark)] dark:bg-[var(--color-light)]" />
             </div>
 
 
 
-            <div className="col-span-2 flex flex-col items-end justify-between">
-              <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold"><AnimatedNumber value={20} />+</span>
-                <h2 className="text-xl font-medium capitalize text-[var(--color-dark)]/75 dark:text-[var(--color-light)]/75">
+            <div className="col-span-2 flex flex-col items-end justify-between max-xl:col-span-8 max-xl:flex-row max-xl:items-center max-md:order-3">
+              <div className="flex flex-col items-end justify-center max-xl:items-center max-xl:text-center">
+                <span className="inline-block text-7xl font-bold max-md:text-6xl max-sm:text-5xl max-xs:text-4xl"><AnimatedNumber value={20} />+</span>
+                <h2 className="text-xl font-medium capitalize text-[var(--color-dark)]/75 dark:text-[var(--color-light)]/75 max-xl:text-center max-md:text-lg max-sm:text-base max-xs:text-sm">
                   Projects completed
                 </h2>
               </div>
-              <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold"><AnimatedNumber value={6} />+</span>
-                <h2 className="text-xl font-medium capitalize text-[var(--color-dark)]/75 dark:text-[var(--color-light)]/75">
+              <div className="flex flex-col items-end justify-center max-xl:items-center max-xl:text-center">
+                <span className="inline-block text-7xl font-bold max-md:text-6xl max-sm:text-5xl max-xs:text-4xl"><AnimatedNumber value={6} />+</span>
+                <h2 className="text-xl font-medium capitalize text-[var(--color-dark)]/75 dark:text-[var(--color-light)]/75 max-xl:text-center max-md:text-lg max-sm:text-base max-xs:text-sm">
                   Months of experience
                 </h2>
               </div>
-              <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold"><AnimatedNumber value={20} />+</span>
-                <h2 className="text-xl font-medium capitalize text-[var(--color-dark)]/75 dark:text-[var(--color-light)]/75">
+              <div className="flex flex-col items-end justify-center max-xl:items-center max-xl:text-center">
+                <span className="inline-block text-7xl font-bold max-md:text-6xl max-sm:text-5xl max-xs:text-4xl"><AnimatedNumber value={20} />+</span>
+                <h2 className="text-xl font-medium capitalize text-[var(--color-dark)]/75 dark:text-[var(--color-light)]/75 max-xl:text-center max-md:text-lg max-sm:text-base max-xs:text-sm">
                   Projects completed
                 </h2>
               </div>

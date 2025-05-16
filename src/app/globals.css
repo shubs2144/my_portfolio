@@ -1,6 +1,4 @@
 @import "tailwindcss";
-
-
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* app/globals.css */
@@ -10,10 +8,20 @@
   --color-primary: #B63E96;
   --color-primary-dark: #58E6D9;
   --font-mont: "Montserrat", sans-serif;
+  
+  /* Original circular patterns */
   --circular-light: repeating-radial-gradient(rgba(0, 0, 0, 0.4) 2px,#f5f5f5 5px,#f5f5f5 100px);
   --circular-dark: repeating-radial-gradient(rgba(255, 255, 255, 0.5) 2px,#f5f5f5 8px,#f5f5f5 100px);
-
-    /* Custom breakpoint variables - using your provided values */
+  
+  /* New circular patterns with different sizes */
+  --circular-light-lg: repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 80px);
+  --circular-dark-lg: repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 8px,#1b1b1b 80px);
+  --circular-light-md: repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 60px);
+  --circular-dark-md: repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 8px,#1b1b1b 60px);
+  --circular-light-sm: repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 40px);
+  --circular-dark-sm: repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 8px,#1b1b1b 40px);
+      
+  /* Custom breakpoint variables - using your provided values */
   --screen-xs: 479px;
   --screen-sm: 639px;
   --screen-md: 767px;
@@ -22,10 +30,18 @@
   --screen-2xl: 1535px;
 }
 
-/* Add dark mode override just for the circular patterns */
+/* Add dark mode override for the circular patterns */
 .dark {
   --circular-light: repeating-radial-gradient(rgba(255, 255, 255, 0.5) 2px,#1b1b1b 8px,#1b1b1b 100px);
   --circular-dark: repeating-radial-gradient(rgba(0, 0, 0, 0.4) 2px,#f5f5f5 5px,#f5f5f5 100px);
+  
+  /* Dark mode overrides for the new variants */
+  --circular-light-lg: repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 8px,#1b1b1b 80px);
+  --circular-dark-lg: repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 80px);
+  --circular-light-md: repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 8px,#1b1b1b 60px);
+  --circular-dark-md: repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 60px);
+  --circular-light-sm: repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 8px,#1b1b1b 40px);
+  --circular-dark-sm: repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 40px);
 }
 
 body {
@@ -46,29 +62,60 @@ body {
   .animate-spin-slow {
     animation: spin-slow 8s linear infinite;
   }
-
+  
+  /* Original circular background classes */
   .bg-circular-light {
     background-image: var(--circular-light);
     background-size: cover;
     background-repeat: no-repeat;
   }
-
   .bg-circular-dark {
     background-image: var(--circular-dark);
     background-size: cover;
     background-repeat: no-repeat;
   }
+  
+  /* New variant classes for different sizes */
+  .bg-circular-light-lg {
+    background-image: var(--circular-light-lg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .bg-circular-dark-lg {
+    background-image: var(--circular-dark-lg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .bg-circular-light-md {
+    background-image: var(--circular-light-md);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .bg-circular-dark-md {
+    background-image: var(--circular-dark-md);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .bg-circular-light-sm {
+    background-image: var(--circular-light-sm);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .bg-circular-dark-sm {
+    background-image: var(--circular-dark-sm);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
   /* Custom responsive utilities using your breakpoints */
-  
-  /* 2xl breakpoint - screens smaller than 1536px */
+    /* 2xl breakpoint - screens smaller than 1536px */
   @media (max-width: var(--screen-2xl)) {
     .max-2xl\:hidden {
       display: none;
     }
     /* Add more 2xl specific utilities here */
   }
-  
+    
   /* xl breakpoint - screens smaller than 1280px */
   @media (max-width: var(--screen-xl)) {
     .max-xl\:hidden {
@@ -76,31 +123,53 @@ body {
     }
     /* Add more xl specific utilities here */
   }
-  
+    
   /* lg breakpoint - screens smaller than 1024px */
   @media (max-width: var(--screen-lg)) {
     .max-lg\:hidden {
       display: none;
     }
     /* Add more lg specific utilities here */
+    .max-lg\:bg-circular-lightLg {
+      background-image: var(--circular-light-lg);
+    }
+    
+    .max-lg\:bg-circular-darkLg {
+      background-image: var(--circular-dark-lg);
+    }
   }
-  
+    
   /* md breakpoint - screens smaller than 768px */
   @media (max-width: var(--screen-md)) {
     .max-md\:hidden {
       display: none;
     }
+    .max-md\:bg-circular-lightMd {
+      background-image: var(--circular-light-md);
+    }
+    
+    .max-md\:bg-circular-darkMd {
+      background-image: var(--circular-dark-md);
+    }
+    
     /* Add more md specific utilities here */
   }
-  
+    
   /* sm breakpoint - screens smaller than 640px */
   @media (max-width: var(--screen-sm)) {
     .max-sm\:hidden {
       display: none;
     }
+    .max-sm\:bg-circular-lightSm {
+      background-image: var(--circular-light-sm);
+    }
+    
+    .max-sm\:bg-circular-darkSm {
+      background-image: var(--circular-dark-sm);
+    }
     /* Add more sm specific utilities here */
   }
-  
+    
   /* xs breakpoint - screens smaller than 480px */
   @media (max-width: var(--screen-xs)) {
     .max-xs\:hidden {
@@ -108,6 +177,4 @@ body {
     }
     /* Add more xs specific utilities here */
   }
-
 }
-

@@ -10,6 +10,7 @@ import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "../components/Skills";
 import Experience from "../components/Experience";
 import Education from "../components/Education";
+import Timeline from '../components/Timeline';
 
 
 const AnimatedNumber = ({ value }) => {
@@ -122,6 +123,7 @@ const page = () => {
           <Skills />
           <Experience />
           <Education />
+          <Timeline />
         </Layout>
       </main>
     </>

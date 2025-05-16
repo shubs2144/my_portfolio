@@ -19,7 +19,9 @@ const Skill = ({ name, x, y }) => {
 const Skills = () => {
   return (
     <>
-      <h2 className="font-bold text-8xl mt-48 text-center max-md:text-7xl max-sm:text-6xl max-xs:text-5xl max-md:mt-24">Skills</h2>
+      <h2 className="font-bold text-8xl mt-48 text-center max-md:text-7xl max-sm:text-5xl max-xs:text-4xl max-md:mt-24">
+        Skills
+      </h2>
       <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circular-light max-lg:h-[70vh] max-sm:h-[50vh] max-lg:bg-circular-lightLg max-lg:bg-circular-darkLg max-md:bg-circular-lightMd max-md:bg-circular-darkMd max-sm:bg-circular-lightSm max-sm:bg-circular-darkSm">
         <motion.div
           className=" rounded-full flex items-center justify-center flex-wrap p-6 font-semibold bg-[var(--color-dark)]/90 text-[var(--color-light)] shadow-[var(--color-dark)] cursor-pointer absolute dark:bg-[var(--color-light)]/90 dark:text-[var(--color-dark)] max-lg:p-6 max-md:p-4 max-sm:text-xs max-sm:p-2"

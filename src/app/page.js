@@ -7,6 +7,7 @@ import { LinkArrow } from "./components/Icons";
 import HireMe from "./components/HireMe";
 import LightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 import Head from "next/head";
+import Chatbot from '../app/components/Chatbot';
 
 export default function Home() {
   return (
@@ -31,7 +32,7 @@ export default function Home() {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
               />
             </div>
-            <div className="w-1/2 flex flex-col items-start justify-center pl-8 max-lg:w-full max-lg:text-center">
+            <div className="w-1/2 flex flex-col items-start justify-center pl-8 max-lg:pl-0 max-lg:w-full max-lg:text-center">
               <AnimatedText
                 text="From Frontend to Backend, and Beyond with Automation."
                 className="!text-6xl !text-left max-xl:!text-5xl max-lg:!text-center max-lg:!text-6xl max-md:!text-5xl max-sm:!text-3xl"
@@ -69,6 +70,10 @@ export default function Home() {
           />
         </div>
       </main>
+       <Chatbot />
+        {/* <div className="absolute right-20 top-1/4 w-64 h-64 max-lg:hidden">
+        <TechSphere />
+      </div> */}
     </>
   );
 }

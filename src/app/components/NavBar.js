@@ -7,6 +7,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { GithubIcon, LinkedInIcon, MoonIcon, NaukariIcon, SunIcon, TwitterIcon } from "./Icons";
 import { motion } from "framer-motion";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
+import Chatbot from "./Chatbot";
 
 const CustomLink = ({ href, title, className }) => {
   const pathname = usePathname(); // Get current path
@@ -59,7 +60,8 @@ const NavBar = () => {
   return (
     <header className="w-full flex items-center justify-between px-32 py-10 font-medium dark:bg-[var(--color-dark)] dark:text-[var(--color-light)] relative z-10 max-lg:px-16 max-md:px-12 max-sm:px-8">
 
-      <button className="flex-col items-center justify-center hover:cursor-pointer hidden max-lg:flex" onClick={handleClick}>
+      <button className="flex-col items-center justify-center hover:cursor-pointer hidden max-lg:flex" onClick={handleClick}  aria-label={isOpen ? "Close menu" : "Open menu"}
+  aria-expanded={isOpen}>
         <span className={`bg-[var(--color-dark)] dark:bg-[var(--color-light)] transition-all duration-300 ease-out w-6 h-0.5 rounded-sm ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
         <span className={`bg-[var(--color-dark)] dark:bg-[var(--color-light)] transition-all duration-300 ease-out w-6 h-0.5 rounded-sm my-0.5 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
         <span className={`bg-[var(--color-dark)] dark:bg-[var(--color-light)] transition-all duration-300 ease-out w-6 h-0.5 rounded-sm ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
@@ -232,9 +234,14 @@ const NavBar = () => {
       }
 
       {/* Logo */}
-      <div className="absolute left-[50%] top-4 translate-x-[-50%] text-2xl font-bold ">
+      {/* <div className="absolute left-[50%] top-4 translate-x-[-50%] text-2xl font-bold ">
         <Logo />
-      </div>
+      </div> */}
+
+      {/* <div className="absolute left-[50%] top-4 translate-x-[-50%] text-2xl font-bold "> */}
+        <Chatbot />
+      {/* </div> */}
+
 
       {/* Secondary Navigation */}
 

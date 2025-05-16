@@ -14,7 +14,7 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5 , type: 'spring' }}>
 
-        <h3 className='capitalize  text-2xl font-bold'>{position}&nbsp; <a href={companyLink}
+        <h3 className='capitalize  text-2xl font-bold mb-2'>{position}&nbsp; <a href={companyLink}
           target='_blank '
           className='text-[var(--color-primary)] hover:text-[var(--color-dark)] font-bold capitalize text-2xl dark:text-[var(--color-primary-dark)] dark:hover:text-[var(--color-light)]'
         > @{company}</a></h3>

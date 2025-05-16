@@ -10,7 +10,7 @@ import { GithubIcon } from '../components/Icons'
 import img1 from '../../../public/images/projects/crypto-screener-cover-image.jpg'
 import { motion } from 'framer-motion'
 
-const FreamerImage = motion(Image)
+const FramerImage = motion(Image)
 
 const FeaturedProjects = ({ type, title, summary, img, link, githubLink }) => {
   return (
@@ -20,7 +20,7 @@ const FeaturedProjects = ({ type, title, summary, img, link, githubLink }) => {
         <Link href={link} target="_blank"
           className="w-1/2 cursor-pointer overflow-hidden rounded-lg dark:shadow-[var(--color-light)]"
         >
-         <FreamerImage src={img} alt={title} className="w-full h-auto" 
+         <FramerImage src={img} alt={title} className="w-full h-auto" 
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.2 }}
         priority
@@ -66,7 +66,7 @@ const Project = ({ title, type, link, githubLink, img }) => {
       <Link href={link} target="_blank"
         className="w-full cursor-pointer overflow-hidden rounded-lg"
       >
-       <FreamerImage src={img} alt={title} className="w-full h-auto" 
+       <FramerImage src={img} alt={title} className="w-full h-auto" 
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.2 }}
         />

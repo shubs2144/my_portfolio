@@ -7,7 +7,7 @@ const Skill = ({ name, x, y }) => {
       className="rounded-full flex items-center justify-center flex-wrap py-3 px-6 font-semibold bg-[var(--color-dark)]/90 text-[var(--color-light)] shadow-[var(--color-dark)] cursor-pointer absolute dark:bg-[var(--color-light)]/90 dark:text-[var(--color-dark)] dark:shadow-[var(--color-light)] max-lg:py-2 max-lg:px-4 max-md:text-sm max-md:py-1 max-md:px-2 max-sm:bg-transparent max-sm:dark:bg-transparent max-sm:dark:text-[var(--color-light)] max-sm:text-[var(--color-dark)] max-sm:font-bold max-sm:m-4 max-sm:p-4 max-md:p-4"
       whileHover={{ scale: 1.05 }}
       initial={{ x: 0, y: 0 }}
-      whileInView={{ x: x, y: y, }}
+      whileInView={{ x: x, y: y }}
       transition={{ duration: 3, type: "spring" }}
       viewport={{ once: true }}
     >
@@ -60,7 +60,6 @@ const Skills = () => {
         <Skill name="Vitest" x="36vw" y="-5vw" />
         <Skill name="Cucumber" x="35vw" y="5vw" />
         <Skill name="CI/CD" x="-30vw" y="-17vw" />
-
       </div>
     </>
   );

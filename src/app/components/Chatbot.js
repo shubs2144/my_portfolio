@@ -76,7 +76,7 @@ const Chatbot = () => {
       )}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-16 h-16 bg-[var(--color-primary)] dark:bg-[var(--color-primary-dark)] text-[var(--color-light)] rounded-full shadow-lg flex items-center justify-center dark:text-[var(--color-dark)]"
+        className="w-16 h-16 bg-[var(--color-primary)] dark:bg-[var(--color-primary-dark)] text-[var(--color-light)] rounded-full shadow-lg flex items-center justify-center dark:text-[var(--color-dark)] border border-[var(--color-dark)] dark:border-[var(--color-light)] hover:cursor-pointer"
       >
         {isOpen ? '✕' : '🤖'}
       </button>

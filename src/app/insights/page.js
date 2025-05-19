@@ -40,7 +40,7 @@ const MovingImg = ({ title, img, link }) => {
       onMouseLeave={handleMouseLeave}
 >
       <h2 className='capitalize text-xl font-semibold hover:underline'>{title}</h2>
-      <FreamerImage style={{ x:x, y:y }} ref={imgRef} src={img} alt={title} className='z-50 w-96 h-auto hidden absolute rounded-lg'/>
+      <FreamerImage style={{ x:x, y:y }} ref={imgRef} src={img} alt={title} className='z-50 w-96 h-auto hidden absolute rounded-lg max-md:!hidden'/>
       </Link>
   )
 }
@@ -52,9 +52,9 @@ const Article = ({ title, date, link, img }) => {
     whileInView={{ y: 0 }}
     transition={{ duration: 0.5, ease: "easeInOut" }}
     viewport={{ once: true }}
-    className='relative w-full flex items-center justify-between p-4 py-6 my-6 bg-[var(--color-light)] rounded-2xl border border-solid border-[var(--color-dark)] z-10 first:mt-0 border-r-4 border-b-4 dark:bg-[var(--color-dark)] dark:border-[var(--color-light)]'> 
+    className='relative w-full flex items-center justify-between p-4 py-6 my-6 bg-[var(--color-light)] rounded-2xl border border-solid border-[var(--color-dark)] z-10 first:mt-0 border-r-4 border-b-4 dark:bg-[var(--color-dark)] dark:border-[var(--color-light)] max-sm:flex-col'> 
      <MovingImg title={title} img={img} link={link} />
-      <span className='text-[var(--color-primary)] font-semibold pl-4 dark:text-[var(--color-primary-dark)]'>{date}</span>
+      <span className='text-[var(--color-primary)] font-semibold pl-4 dark:text-[var(--color-primary-dark)] max-sm:self-start max-sm:pl-0 max-sm:text-sm'>{date}</span>
     </motion.li>
       )
 }
@@ -76,7 +76,7 @@ const FeaturedArticles = ({ time, title, summary, img, link }) => {
       </Link>
       <Link href={link} target="_blank"
         className="hover:underline underline-offset-2">
-        <h2 className="capitalize my-2 mt-4 text-2xl font-bold hover:underline">
+        <h2 className="capitalize my-2 mt-4 text-2xl font-bold hover:underline max-sm:text-lg">
           {title}
         </h2>
       </Link>
@@ -103,8 +103,8 @@ const page = () => {
       </Head>
       <main className='w-full flex flex-col items-center justify-center overflow-hidden dark:text-[var(--color-light)] dark:bg-[var(--color-dark)]'>
         <Layout className="pt-16">
-          <AnimatedText text="Insights" className="mb-16" />
-          <ul className='grid grid-cols-2 gap-16'>
+          <AnimatedText text="Insights" className="mb-14 max-lg:!text-7xl max-sm:!text-6xl max-sm:mb-8" />
+          <ul className='grid grid-cols-2 gap-16 max-md:grid-cols-1 max-md:gap-8 max-md:gap-y-16'>
             <FeaturedArticles
               time="10 min read"
               title="Article Title 1"
@@ -147,6 +147,8 @@ const page = () => {
               link="/articles/article4"
               img={article4}
             />
+
+            {/* last article is hiding behind the footer */}
             <Article
               title="Article Title 5"
               date="2023-10-05"

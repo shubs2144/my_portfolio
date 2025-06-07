@@ -40,7 +40,7 @@ const Chatbot = () => {
         <motion.div
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          className="w-80 h-96 bg-[var(--color-light)] dark:bg-[var(--color-dark)] shadow-xl rounded-t-lg flex flex-col border border-[var(--color-dark)] dark:border-[var(--color-light)] dark:text-[var(--color-light)]"
+          className="w-80 h-96 bg-[var(--color-light)] dark:bg-[var(--color-dark)] shadow-xl rounded-t-lg flex flex-col border border-[var(--color-dark)] dark:border-[var(--color-light)] dark:text-[var(--color-light)] "
         >
           <div className="p-4 bg-[var(--color-primary)] dark:bg-[var(--color-primary-dark)] text-[var(--color-light)] dark:text-[var(--color-dark)] rounded-t-lg">
             <h3 className="font-bold">Portfolio Assistant</h3>

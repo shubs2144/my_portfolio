@@ -7,7 +7,7 @@ const TimelineItem = ({ year, title, description }) => {
   const ref = useRef(null);
 
   return (
-    <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[73%] mx-auto flex flex-col items-start justify-between'>
+    <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[73%] mx-auto flex flex-col items-start justify-between max-md:w-[80%]'>
       {/* Custom LiIcon with year */}
       <div className='absolute left-0 stroke-[var(--color-dark)] dark:stroke-[var(--color-light)] max-sm:-left-2 max-md:-left-1'>
         <figure className='flex items-center justify-center'>
@@ -55,24 +55,29 @@ const Timeline = () => {
       description: 'Began my B.E. in Electronics and Communication Engineering at Jain College of Engineering'
     },
     {
+      year: '2021',
+      title: 'First Internship - IoT & Embedded Systems Internship',
+      description: 'Completed hands-on internship, exploring hardware-software integration.'
+    },
+    {
       year: '2022',
-      title: 'First Internship',
-      description: 'Completed internship in IoT and Embedded Systems'
+      title: 'Web Development Journey',
+      description: 'Started learning full-stack development with MERN stack and Earned Full Stack Development certification.'
     },
     {
       year: '2023',
-      title: 'Web Development Journey',
-      description: 'Started learning full-stack development with MERN stack'
+      title: 'Full Stack Foundation',
+      description: 'Started working with the MERN stack and completed a web development internship at Aqumez Technologies.'
     },
     {
       year: '2024',
       title: 'Professional Developer',
-      description: 'Joined Quad Technologies as Junior Software Engineer'
+      description: 'Joined Quad Technologies as a Junior Software Engineer, contributing to full stack projects and automation testing.'
     },
-    {
-      year: 'Now',
+     {
+      year: '2025',
       title: 'Expanding Skills',
-      description: 'Working with Next.js, TypeScript, and advanced testing frameworks'
+      description: 'Advancing in software development with Next.js, TypeScript, CI/CD, and Playwright-based automation.'
     }
   ];
 

@@ -102,8 +102,8 @@ const page = () => {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <main className='w-full flex flex-col items-center justify-center overflow-hidden dark:text-[var(--color-light)] dark:bg-[var(--color-dark)]'>
-        <Layout className="pt-16">
-          <AnimatedText text="Insights" className="mb-14 max-lg:!text-7xl max-sm:!text-6xl max-sm:mb-8" />
+        <Layout className="pt-10">
+          <AnimatedText text="The Developer’s Notebook - My Insights" className="mb-10 max-lg:!text-7xl max-sm:!text-6xl max-sm:mb-8" />
           <ul className='grid grid-cols-2 gap-16 max-md:grid-cols-1 max-md:gap-8 max-md:gap-y-16'>
             <FeaturedArticles
               time="10 min read"

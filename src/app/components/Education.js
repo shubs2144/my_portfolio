@@ -15,7 +15,7 @@ const Details = ({ type, time, place, info }) => {
             transition={{ duration: 0.5, type: 'spring' }}>
             <h3 className='capitalize  text-2xl font-bold mb-2 max-md:text-xl max-sm:text-lg'>{type}</h3>
             <span className='capitalize font-medium text-[--var(--color-dark)]/75 dark:text-[var(--color-light)]/75 max-sm:text-sm'>
-                {time} | {info}
+                {info} | {time}
             </span>
             <p className='w-full font-medium max-md:text-sm'>{place}</p>
         </motion.div>

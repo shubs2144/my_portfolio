@@ -67,9 +67,9 @@ const NavBar = () => {
   };
 
   return (
-    <header className="w-full flex items-center justify-between px-32 py-10 font-medium dark:bg-[var(--color-dark)] dark:text-[var(--color-light)] relative z-10 max-lg:px-16 max-md:px-12 max-sm:px-8">
+    <header className="w-full flex items-center justify-between px-32 py-10 font-medium dark:bg-[var(--color-dark)] dark:text-[var(--color-light)] relative z-10 max-lg:px-16 max-md:px-12 max-sm:px-8  fixed top-0 left-0  text-[var(--color-dark)] z-50">
       <button
-        className="flex-col items-center justify-center hover:cursor-pointer hidden max-lg:flex"
+        className="flex-col items-center justify-center hover:cursor-pointer hidden max-lg:flex  fixed left-8 top-10 z-50"
         onClick={handleClick}
         aria-label={isOpen ? "Close menu" : "Open menu"}
         aria-expanded={isOpen}
@@ -102,7 +102,7 @@ const NavBar = () => {
 
         <nav className="flex items-center justify-center flex-wrap space-x-4">
           <motion.a
-            href="/https://x.com/ShubhamPat77625"
+            href="https://x.com/ShubhamPat77625"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-500 w-6 "
@@ -113,7 +113,7 @@ const NavBar = () => {
           </motion.a>
 
           <motion.a
-            href="/https://github.com/shubs2144"
+            href="https://github.com/shubs2144"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-500 w-6"
@@ -124,7 +124,7 @@ const NavBar = () => {
           </motion.a>
 
           <motion.a
-            href="/https://www.linkedin.com/in/shubham-patil-1a066b280/"
+            href="https://www.linkedin.com/in/shubham-patil-1a066b280/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-500 w-6"
@@ -176,7 +176,7 @@ const NavBar = () => {
         <motion.div
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          className="min-w-[70vw] flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 bg-[var(--color-dark)]/90 dark:bg-[var(--color-light)]/75 rounded-lg backdrop-blur-md py-32 z-50"
+          className="min-w-[70vw] flex flex-col justify-between items-center fixed top-76 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[var(--color-dark)]/90 dark:bg-[var(--color-light)]/75 rounded-lg backdrop-blur-md py-32 z-[60]"
         >
           {/* Primary Navigation */}
           <nav className="flex items-center justify-center flex-col">
@@ -206,9 +206,9 @@ const NavBar = () => {
             />
           </nav>
 
-          <nav className="flex items-center justify-center flex-wrap space-x-4 mt-2">
+          <nav className="flex items-center justify-center flex-wrap space-x-4 mt-">
             <motion.a
-              href="/https://x.com/ShubhamPat77625"
+              href="https://x.com/ShubhamPat77625"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-500 w-6 max-sm:mx-1"
@@ -219,7 +219,7 @@ const NavBar = () => {
             </motion.a>
 
             <motion.a
-              href="/https://github.com/shubs2144"
+              href="https://github.com/shubs2144"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-500 w-6 bg-[var(--color-light)] dark:bg-[var(--color-dark)] rounded-full max-sm:mx-1"
@@ -230,7 +230,7 @@ const NavBar = () => {
             </motion.a>
 
             <motion.a
-              href="/https://www.linkedin.com/in/shubham-patil-1a066b280/"
+              href="https://www.linkedin.com/in/shubham-patil-1a066b280/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-500 w-6 max-sm:mx-1"

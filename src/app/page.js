@@ -20,7 +20,7 @@ export default function Home() {
         />
       </Head>
 
-      <main className="flex items-center w-full min-h-screen text-[var(--color-dark)] dark:text-[var(--color-light)] dark:bg-[var(--color-dark)]">
+      <main className="flex items-center w-full min-h-screen text-[var(--color-dark)] dark:text-[var(--color-light)] dark:bg-[var(--color-dark)] ">
         <Layout className="pt-0 max-md:pt-16 max-sm:pt-8 dark:bg-[var(--color-dark)]">
           <div className="flex items-center justify-between w-full max-lg:flex-col">
             <div className="w-1/2 max-md:w-full">
@@ -38,7 +38,7 @@ export default function Home() {
                 className="!text-6xl !text-left max-xl:!text-5xl max-lg:!text-center max-lg:!text-6xl max-md:!text-5xl max-sm:!text-3xl"
               />
               <p className="my-4 text-base font-medium max-md:text-sm max-sm:text-xs">
-              Results-driven Full Stack Developer skilled in building scalable applications and automating quality assurance. I turn complex concepts into user-friendly solutions. Explore my latest projects and articles, showcasing my expertise in Web development and Automation testing.
+                Results-driven Full Stack Developer skilled in building scalable applications and automating quality assurance. I turn complex concepts into user-friendly solutions. Explore my latest projects and articles, showcasing my expertise in Web development and Automation testing.
               </p>
               <div className="flex items-center self-start mt-2 max-lg:self-center">
                 <Link
@@ -70,8 +70,8 @@ export default function Home() {
           />
         </div>
       </main>
-       <Chatbot />
-        {/* <div className="absolute right-20 top-1/4 w-64 h-64 max-lg:hidden">
+      <Chatbot />
+      {/* <div className="absolute right-20 top-1/4 w-64 h-64 max-lg:hidden">
         <TechSphere />
       </div> */}
     </>

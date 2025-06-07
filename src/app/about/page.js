@@ -52,8 +52,8 @@ const page = () => {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <main className="w-full flex flex-col items-center justify-center dark:text-[var(--color-light)] overflow-x-hidden">
-        <Layout className="pt-16">
-          <AnimatedText text="Code smart. Test smarter!" className="mb-14 max-lg:!text-7xl max-sm:!text-6xl max-sm:mb-8" />
+        <Layout className="pt-10">
+          <AnimatedText text="Code smart. Test smarter!" className="mb-10 max-lg:!text-7xl max-sm:!text-6xl max-sm:mb-8" />
           <div className="grid grid-cols-8 gap-12 w-full max-sm:gap-8">
             <div className="col-span-3 flex flex-col items-start justify-start max-xl:col-span-4 max-md:order-2 max-md:col-span-8">
               <h2 className="text-lg font-bold mb-4 uppercase text-[var(--color-dark)]/75 dark:text-[var(--color-light)]/75">
@@ -113,9 +113,9 @@ const page = () => {
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-center max-xl:items-center max-xl:text-center">
-                <span className="inline-block text-7xl font-bold max-md:text-6xl max-sm:text-5xl max-xs:text-4xl"><AnimatedNumber value={20} />+</span>
+                <span className="inline-block text-7xl font-bold max-md:text-6xl max-sm:text-5xl max-xs:text-4xl"><AnimatedNumber value={85} />+</span>
                 <h2 className="text-xl font-medium capitalize text-[var(--color-dark)]/75 dark:text-[var(--color-light)]/75 max-xl:text-center max-md:text-lg max-sm:text-base max-xs:text-sm">
-                  Projects completed
+                  Test Coverage Achieved
                 </h2>
               </div>
             </div>

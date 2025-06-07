@@ -49,16 +49,16 @@ const Experience = () => {
         <ul className='w-full flex flex-col items-start justify-between ml-4 max-sm:ml-2'>
           <Details
             position="Jr. Software Engineer" company="Quad Technologies Ltd"
-            companyLink="https://quadtechnologies.in/"
+            companyLink=""
             time="2024 - Present" address=" Bengaluru, India"
             work="As a Junior Software Engineer at Quad Technologies Ltd, I developed scalable web applications using Next.js, TypeScript, and Node.js. I built automated testing frameworks with Playwright and Cucumber, achieving 85% code coverage and reducing manual testing by 70%. I also optimized deployment with CI/CD pipelines (GitHub Actions), containerized apps using Docker, and enhanced features with Genkit LLM for image generation, collaborating effectively in an agile team."
           />
 
           <Details
-            position="Jr. Software Engineer" company="Quad Technologies Ltd"
-            companyLink="https://quadtechnologies.in/"
-            time="2024 - Present" address=" Bengaluru, India"
-            work="As a Junior Software Engineer at Quad Technologies Ltd, I developed scalable web applications using Next.js, TypeScript, and Node.js. I built automated testing frameworks with Playwright and Cucumber, achieving 85% code coverage and reducing manual testing by 70%. I also optimized deployment with CI/CD pipelines (GitHub Actions), containerized apps using Docker, and enhanced features with Genkit LLM for image generation, collaborating effectively in an agile team."
+            position="Backend Developer" company="O(1) coding"
+            companyLink=""
+            time="2024 - 2024" address="Remote"
+            work="I’ve worked as a Backend Engineer for over 6 months, building and maintaining scalable APIs using FastAPI, Node.js, and Express.js. I’ve implemented secure authentication systems (JWT/OAuth2), designed database schemas with PostgreSQL and MongoDB, and integrated CI/CD pipelines using GitHub Actions. I also wrote unit tests to ensure reliability and maintainability of backend services."
           />
         </ul>
       </div>

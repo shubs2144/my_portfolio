@@ -70,7 +70,10 @@ export default function Home() {
           />
         </div>
       </main>
-      <Chatbot />
+      <div className="absolute right-8 bottom-72 inline-block w-24 max-md:hidden">
+          <Chatbot />
+      </div>
+      
       {/* <div className="absolute right-20 top-1/4 w-64 h-64 max-lg:hidden">
         <TechSphere />
       </div> */}

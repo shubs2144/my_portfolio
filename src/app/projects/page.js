@@ -8,8 +8,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { GithubIcon } from '../components/Icons'
 import img1 from '../../../public/images/projects/crypto-screener-cover-image.jpg'
-import gigster from '../../../public/images/projects/gigster.png'
-import portfolio from '../../../public/images/projects/portfolio-dark.png'
+import gigster from '../../../public/images/projects/gigster-google.jpg'
+import portfolio from '../../../public/images/projects/portfolio2.jpg'
+import smartOfc from '../../../public/images/projects/smart-ofc.jpg'
+import testing from '../../../public/images/projects/testing.jpg'
+import api from '../../../public/images/projects/API.jpg'
 import { motion } from 'framer-motion'
 
 const FramerImage = motion(Image)
@@ -55,12 +58,12 @@ const FeaturedProjects = ({ type, title, summary, img, link, githubLink, tags })
             ))}
           </div>
           <div className='flex justify-between w-full mt-2'>
-             <Link href={link} target="_blank" className="mt-2 text-2xl font-semibold text-[var(--color-dark)] underline rounded-lg dark:text-[var(--color-light)] transition-colors duration-300 ease-in-out max-sm:px-4 max-sm:text-base">
+            <Link href={link} target="_blank" className="mt-2 text-2xl font-semibold text-[var(--color-dark)] underline rounded-lg dark:text-[var(--color-light)] transition-colors duration-300 ease-in-out max-sm:px-4 max-sm:text-base">
               View Project
             </Link>
             <Link href={githubLink} target="_blank" className="w-10">
               <GithubIcon />
-            </Link>          
+            </Link>
           </div>
         </div>
       </div>
@@ -141,25 +144,25 @@ const page = () => {
     },
     {
       id: 3,
-      title: "REST API Service",
+      title: "API Chaining Dashboard",
       type: "Backend Project",
-      summary: "A scalable REST API service with authentication and database integration.",
-      img: img1,
-      link: "https://project-link3.com",
-      githubLink: "",
+      summary: "This project is a responsive web application built with React.js and Tailwind CSS, demonstrating the ability to handle complex API interactions through chaining multiple API calls.",
+      img: api,
+      link: "https://github.com/shubs2144/API-Chaining-Dashboard",
+      githubLink: "https://github.com/shubs2144/API-Chaining-Dashboard",
       category: "Backend",
-      tags: ["Node.js", "Express", "PostgreSQL", "JWT"]
+      tags: ["Node.js", "Express", "REST API", "JWT", "HTTP Methods"]
     },
     {
       id: 4,
-      title: "Portfolio Website",
-      type: "Frontend Project",
-      summary: "Built a modern, fully responsive portfolio using Next.js, Tailwind CSS, and Framer Motion animations to showcase projects with smooth, interactive UI/UX.",
-      img: portfolio,
-      link: "https://project-link4.com",
-      githubLink: "https://github.com/shubs2144/my_portfolio",
-      category: "Frontend",
-      tags: ["Next.js", "Tailwind CSS", "Framer Motion"]
+      title: "Smart Office Attendance & Lunch Tracker",
+      type: "Full Stack Project",
+      summary: "Developed an employee attendance system tracking office/home/leave status (weekdays only) with admin analytics dashboard and automated lunch count notifications for chefs. Implemented JWT authentication, CORS-enabled backend, and SMTP integration for daily 9:30 AM emails (excluding weekends).",
+      img: smartOfc,
+      link: "https://github.com/shubs2144/lunch-attendance-mgt-system",
+      githubLink: "https://github.com/shubs2144/lunch-attendance-mgt-system",
+      category: "Full Stack",
+      tags: ["React.js", "SMTP", "Node.js", "REST APIs", "MongoDB"]
     },
     {
       id: 5,
@@ -182,6 +185,17 @@ const page = () => {
       githubLink: "",
       category: "Frontend",
       tags: ["React", "Storybook", "TypeScript", "Styled Components"]
+    },
+    {
+      id: 7,
+      title: "Automated Testing Framework with Playwright & Cucumber",
+      type: "Automated Testing",
+      summary: "Developed a TypeScript-based end-to-end test automation framework using Playwright and Cucumber, implementing BDD methodology. Integrated with CI/CD pipelines.",
+      img: testing,
+      link: "https://github.com/shubs2144/automation",
+      githubLink: "https://github.com/shubs2144/automation",
+      category: "Testing",
+      tags: ["TypeScript", "Playwright", "Cucumber", "GitHub Actions", "Allure Reports"]
     }
   ];
 

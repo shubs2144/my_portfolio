@@ -24,9 +24,8 @@ const CustomLink = ({ href, title, className }) => {
     <Link href={href} className={`${className} relative group`}>
       {title}
       <span
-        className={`h-[2px] inline-block bg-[var(--color-dark)] absolute left-0 -bottom-0.5 transition-[width] duration-300 ${
-          isActive ? "w-full" : "w-0 group-hover:w-full"
-        } dark:bg-[var(--color-light)]`}
+        className={`h-[2px] inline-block bg-[var(--color-dark)] absolute left-0 -bottom-0.5 transition-[width] duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
+          } dark:bg-[var(--color-light)]`}
       ></span>
     </Link>
   );
@@ -50,9 +49,8 @@ const CustomMobileLink = ({ href, title, className, toggle }) => {
     >
       {title}
       <span
-        className={`h-[2px] inline-block bg-[var(--color-light)] absolute left-0 -bottom-0.5 transition-[width] duration-300 ${
-          isActive ? "w-full" : "w-0 group-hover:w-full"
-        } dark:bg-[var(--color-dark)]`}
+        className={`h-[2px] inline-block bg-[var(--color-light)] absolute left-0 -bottom-0.5 transition-[width] duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
+          } dark:bg-[var(--color-dark)]`}
       ></span>
     </button>
   );
@@ -75,19 +73,16 @@ const NavBar = () => {
         aria-expanded={isOpen}
       >
         <span
-          className={`bg-[var(--color-dark)] dark:bg-[var(--color-light)] transition-all duration-300 ease-out w-6 h-0.5 rounded-sm ${
-            isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
-          }`}
+          className={`bg-[var(--color-dark)] dark:bg-[var(--color-light)] transition-all duration-300 ease-out w-6 h-0.5 rounded-sm ${isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
+            }`}
         ></span>
         <span
-          className={`bg-[var(--color-dark)] dark:bg-[var(--color-light)] transition-all duration-300 ease-out w-6 h-0.5 rounded-sm my-0.5 ${
-            isOpen ? "opacity-0" : "opacity-100"
-          }`}
+          className={`bg-[var(--color-dark)] dark:bg-[var(--color-light)] transition-all duration-300 ease-out w-6 h-0.5 rounded-sm my-0.5 ${isOpen ? "opacity-0" : "opacity-100"
+            }`}
         ></span>
         <span
-          className={`bg-[var(--color-dark)] dark:bg-[var(--color-light)] transition-all duration-300 ease-out w-6 h-0.5 rounded-sm ${
-            isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
-          }`}
+          className={`bg-[var(--color-dark)] dark:bg-[var(--color-light)] transition-all duration-300 ease-out w-6 h-0.5 rounded-sm ${isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
+            }`}
         ></span>
       </button>
 
@@ -156,11 +151,10 @@ const NavBar = () => {
           <button
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
             className={`ml-3 flex items-center justify-center rounded-full p-1
-          ${
-            theme === "light"
-              ? "bg-[var(--color-dark)] text-[var(--color-light)]"
-              : "bg-[var(--color-light)] text-[var(--color-dark)]"
-          }
+          ${theme === "light"
+                ? "bg-[var(--color-dark)] text-[var(--color-light)]"
+                : "bg-[var(--color-light)] text-[var(--color-dark)]"
+              }
           `}
           >
             {theme === "light" ? (
@@ -262,11 +256,10 @@ const NavBar = () => {
             <button
               onClick={() => setTheme(theme === "light" ? "dark" : "light")}
               className={`ml-3 flex items-center justify-center rounded-full p-1
-          ${
-            theme === "light"
-              ? "bg-[var(--color-dark)] text-[var(--color-light)]"
-              : "bg-[var(--color-light)] text-[var(--color-dark)]"
-          }
+          ${theme === "light"
+                  ? "bg-[var(--color-dark)] text-[var(--color-light)]"
+                  : "bg-[var(--color-light)] text-[var(--color-dark)]"
+                }
           `}
             >
               {theme === "light" ? (
@@ -280,12 +273,12 @@ const NavBar = () => {
       ) : null}
 
       {/* Logo */}
-      {/* <div className="absolute left-[50%] top-4 translate-x-[-50%] text-2xl font-bold ">
+      <div className="absolute left-[50%] top-4 translate-x-[-50%] text-2xl font-bold ">
         <Logo />
-      </div> */}
+      </div>
 
       {/* <div className="absolute left-[50%] top-4 translate-x-[-50%] text-2xl font-bold "> */}
-      <Chatbot />
+      {/* <Chatbot /> */}
       {/* </div> */}
 
       {/* Secondary Navigation */}

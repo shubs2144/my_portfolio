@@ -4,7 +4,7 @@ import Head from "next/head";
 import AnimatedText from "../components/AnimatedText";
 import Layout from "../components/Layout";
 import Image from "next/image";
-import ProfilePic from "../../../public/images/profile/shubham-profile.jpg";
+import ProfilePic from "../../../public/images/profile/My-picture.jpg";
 import { useEffect, useRef } from "react";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "../components/Skills";
@@ -53,7 +53,7 @@ const page = () => {
       </Head>
       <main className="w-full flex flex-col items-center justify-center dark:text-[var(--color-light)] overflow-x-hidden">
         <Layout className="pt-10">
-          <AnimatedText text="Code smart. Test smarter!" className="mb-10 max-lg:!text-7xl max-sm:!text-6xl max-sm:mb-8" />
+          <AnimatedText text="Code smart. Test smarter!" className="mb-10 max-lg:!text-6xl max-sm:!text-5xl max-sm:mb-8" />
           <div className="grid grid-cols-8 gap-12 w-full max-sm:gap-8">
             <div className="col-span-3 flex flex-col items-start justify-start max-xl:col-span-4 max-md:order-2 max-md:col-span-8">
               <h2 className="text-lg font-bold mb-4 uppercase text-[var(--color-dark)]/75 dark:text-[var(--color-light)]/75">

@@ -88,7 +88,7 @@ const NavBar = () => {
 
       <div className="w-full flex justify-between items-center max-lg:hidden">
         {/* Primary Navigation */}
-        <nav className="flex items-center space-x-4 pl-4 text-lg">
+        <nav className="flex items-center space-x-4 pl-4 text-xl">
           <CustomLink href="/" title="Home" className="" />
           <CustomLink href="/about" title="About" className="" />
           <CustomLink href="/projects" title="Projects" className="" />
@@ -100,7 +100,7 @@ const NavBar = () => {
             href="https://x.com/ShubhamPat77625"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-500 w-6 "
+            className="hover:text-blue-500 w-7 "
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -111,7 +111,7 @@ const NavBar = () => {
             href="https://github.com/shubs2144"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-500 w-6"
+            className="hover:text-blue-500 w-7"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -122,7 +122,7 @@ const NavBar = () => {
             href="https://www.linkedin.com/in/shubham-patil-1a066b280/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-500 w-6"
+            className="hover:text-blue-500 w-7"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
           >

@@ -215,7 +215,7 @@ const page = () => {
       </Head>
       <main className='w-full flex flex-col items-center justify-center dark:text-[var(--color-light)] dark:bg-[var(--color-dark)]'>
         <Layout className="pt-10 dark:bg-[var(--color-dark)]">
-          <AnimatedText text={"Witness My Development Journey"} className='mb-10 max-lg:!text-7xl max-sm:!text-6xl max-sm:mb-6' />
+          <AnimatedText text={"Witness My Development Journey"} className='mb-10 max-lg:!text-6xl max-sm:!text-5xl max-sm:mb-6' />
 
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12 max-sm:gap-2 max-sm:mb-8">

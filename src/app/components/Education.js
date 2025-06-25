@@ -10,9 +10,10 @@ const Details = ({ type, time, place, info }) => {
     <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between max-md:w-[80%]'>
         <LiIcon reference={ref} />
         <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, type: 'spring' }}>
+            initial={{ y: 50}}
+            whileInView={{ y: 0 }}
+            transition={{ duration: 0.5, type: 'spring' }}
+            >
             <h3 className='capitalize  text-2xl font-bold mb-2 max-md:text-xl max-sm:text-lg'>{type}</h3>
             <span className='capitalize font-medium text-[--var(--color-dark)]/75 dark:text-[var(--color-light)]/75 max-sm:text-sm'>
                 {info} | {time}
@@ -29,7 +30,7 @@ const Education = () => {
     const { scrollYProgress } = useScroll(
         {
             target: ref,
-            offset: ["start end", "center start"]
+            offset: ["start end", "center"]
         }
     );
 
